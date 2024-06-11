@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Text Translator",
+  "name": "Linguify",
   "version": "1.0",
-  "description": "Translate highlighted text and words within translations.",
-  "permissions": ["storage", "activeTab", "contextMenus"],
+  "description": "Translate highlighted text and easily find in-depth definitions for words with one click",
+  "permissions": ["storage", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://*/*", "http://*/*"],
       "js": ["content.js"],
       "css": ["styles.css"]
     }
