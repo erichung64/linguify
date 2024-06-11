@@ -1,10 +1,62 @@
 .translation-box {
-    background: #fff;
+    background: #f9f9f9;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    max-width: 300px;
-    word-wrap: break-word;
-    color: #000; 
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.translation-box .translation-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.translation-box .text-section {
+    flex: 1;
+    margin-right: 10px;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    user-select: text;
+}
+
+.translation-box .translated-section {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.translation-box .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.translation-box .actions button {
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.translation-box .actions button.disabled {
+    background: #b0c4de;
+    cursor: not-allowed;
+}
+
+.translation-box .actions button:hover:not(.disabled) {
+    background: #0056b3;
+}
+
+.translation-box .definition {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }
